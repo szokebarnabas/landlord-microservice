@@ -1,0 +1,6 @@
+rootProject.name = 'landlord-microservice'
+
+include 'landlord-property'
+
+include 'landlord-tenants'
+
