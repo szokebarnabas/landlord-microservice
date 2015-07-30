@@ -1,4 +1,4 @@
-package org.landlord.property;
+package org.landlord.support.eureka;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 

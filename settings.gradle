@@ -4,3 +4,5 @@ include 'landlord-property'
 
 include 'landlord-tenants'
 
+include 'support-eureka'
+
