@@ -6,3 +6,5 @@ include 'landlord-tenants'
 
 include 'support-eureka'
 
+include 'support-config-server'
+
