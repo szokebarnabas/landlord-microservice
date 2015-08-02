@@ -1,58 +1,6 @@
-buildscript {
-    repositories {
-        mavenCentral()
-        maven { url "http://repo.spring.io/snapshot" }
-        maven { url "http://repo.spring.io/milestone" }
-        jcenter()
-        maven {
-            url "https://plugins.gradle.org/m2/"
-        }
-    }
-    dependencies {
-        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.0.1.RELEASE")
-    }
-}
-
-version = '1.0'
-
-allprojects {
-    repositories {
-        mavenLocal()
-        mavenCentral()
-        maven { url "http://repo.spring.io/snapshot" }
-        maven { url "http://repo.spring.io/milestone" }
-        jcenter()
-    }
-}
-
 subprojects {
-    project.ext {
-        springBootVersion = '1.2.5.RELEASE'
-    }
-    apply plugin: 'java'
-
-    sourceCompatibility = 1.8
-    targetCompatibility = 1.8
-
+    apply plugin:'java'
     repositories {
-        mavenLocal()
         mavenCentral()
     }
-
-    dependencies {
-        compile("org.springframework.boot:spring-boot-starter:$springBootVersion")
-        testCompile("org.springframework.boot:spring-boot-starter-test")
-        testCompile group: 'junit', name: 'junit', version: '4.11'
-    }
-
-    version = '1.0'
-
-    jar {
-        manifest.attributes provider: 'gradle'
-    }
-}
-
-task wrapper(type: Wrapper) {
-    gradleVersion = '1.9'
-    distributionUrl = 'http://services.gradle.org/distributions/gradle-1.9-all.zip'
 }

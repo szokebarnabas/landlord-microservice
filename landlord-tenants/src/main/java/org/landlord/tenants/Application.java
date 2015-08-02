@@ -1,7 +1,6 @@
 package org.landlord.tenants;
 
-import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@SpringBootApplication
+//@SpringBootApplication
 public class Application {
 }
